@@ -6,9 +6,6 @@ public class AnimationController : MonoBehaviour
 {
     public static AnimationController instance;
 
-    [SerializeField]
-    private Animator buttonAnimator;
-
     private string triggerName;
     private ButtonAnimationRepository buttonRepository;
 
@@ -22,8 +19,9 @@ public class AnimationController : MonoBehaviour
         buttonRepository = ButtonAnimationRepository.instance;
     }
 
-    public void PlayButtonAnimation(ButtonAnimation buttonAnimation)
+    public void PlayButtonAnimation(ButtonAnimation buttonAnimation, Animator buttonAnimator)
     {
+        Debug.Log(buttonAnimator == null);
         triggerName = buttonRepository.GetAnimationTriggerName(buttonAnimation);
         buttonAnimator.SetTrigger(triggerName);
     }

@@ -9,18 +9,25 @@ public class ButtonHandler : MonoBehaviour
 
     private Button button;
     [SerializeField] private ButtonAnimation animationToPlay;
+    private Animator animator;
 
     private AnimationController animationController;
 
     private void Start()
     {
-        animationController = AnimationController.instance;
-        button = GetComponent<Button>();
+        Initialize();
         button.onClick.AddListener(PlayButtonAnimation);
-
     }
+
+    private void Initialize()
+    {
+        animationController = AnimationController.instance;
+        animator = GetComponent<Animator>();
+        button = GetComponent<Button>();
+    }
+
     private void PlayButtonAnimation()
     {
-        animationController.PlayButtonAnimation(animationToPlay);
+        animationController.PlayButtonAnimation(animationToPlay, animator);
     }
 }

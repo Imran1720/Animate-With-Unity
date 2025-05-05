@@ -37,4 +37,5 @@ public enum ButtonAnimation
     NORMAL,
     HIDDEN,
     POPUP,
+    POPOUT
 }
