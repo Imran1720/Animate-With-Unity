@@ -36,6 +36,7 @@ public enum ButtonAnimation
 {
     NORMAL,
     HIDDEN,
-    POPUP,
-    POPOUT
+    POP_UP,
+    POP_OUT,
+    SLIDE_DOWN
 }
