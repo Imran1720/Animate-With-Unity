@@ -41,5 +41,6 @@ public enum ButtonAnimation
     SLIDE_DOWN,
     SLIDE_UP,
     SHAKE,
-    SCALE
+    SCALE,
+    ROTATE
 }
