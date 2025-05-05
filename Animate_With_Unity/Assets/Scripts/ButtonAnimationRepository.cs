@@ -40,5 +40,6 @@ public enum ButtonAnimation
     POP_OUT,
     SLIDE_DOWN,
     SLIDE_UP,
-    SHAKE
+    SHAKE,
+    SCALE
 }
