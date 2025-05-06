@@ -11,7 +11,7 @@ public class ButtonHandler : MonoBehaviour
     [SerializeField] private ButtonAnimation animationToPlay;
     private Animator animator;
 
-    private AnimationController animationController;
+    private ButtonAnimationController animationController;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class ButtonHandler : MonoBehaviour
 
     private void Initialize()
     {
-        animationController = AnimationController.instance;
+        animationController = ButtonAnimationController.instance;
         animator = GetComponent<Animator>();
         button = GetComponent<Button>();
     }
